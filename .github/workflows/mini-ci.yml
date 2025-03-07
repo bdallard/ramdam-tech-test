@@ -18,10 +18,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Lint
         run: npm run lint
@@ -52,5 +51,7 @@ jobs:
           context: .
           push: false
           tags: image-analyzer:latest
-          outputs: type=docker,dest=/tmp/image-analyzer.tar
+          load: true
           
+      - name: Verify Docker image
+        run: docker images
