@@ -68,6 +68,6 @@ make docker-dev
 - [X] validate server input/output 
 - [X] clean logging --> middleware 
 - [X] install eslint 
+- [X] implement proper vitest : https://vitest.dev/
 - [ ] write some git action ci mini file 
-- [ ] implement proper vitest : https://vitest.dev/
 
